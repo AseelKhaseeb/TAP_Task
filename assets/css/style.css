@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --colorR : #cb3931;
+    --colorG : #f0f0f0;
+}
+
+@font-face {
+    src: url(../Poppins/Poppins-Regular.ttf);
+    font-family: Poppins;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.portfolio {
+    height: 160vh;
+    position: relative;
+}
+
+.portfolio-gray {
+    height: 60%;
+    background-color: var(--colorG);
+}
+
+.portfolio-red {
+    height: 40%;
+    background-color: var(--colorR);
+}
+
+.portfolio-center {
+    background-color: white;
+    height: 145vh;
+    width: 63%;
+    position: absolute;
+    top: 5%;
+    left: 17%;
+}
+
+.portfolio-left {
+    margin-left: 4%;
+    position: relative;
+}
+
+@media (max-width: 576px) {
+    .portfolio {
+        height: 100vh;
+    }
+
+    .portfolio-center {
+        width: 80%;
+        left: 10%;
+        height: 83vh;
+        top: 9%;
+    }
+}
+
+@media (min-width: 577px) and (max-width:992px){
+    .portfolio {
+        height: 125vh;
+    }
+
+    .portfolio-center {
+        width: 80%;
+        left: 10%;
+        height: 110vh;
+    }
+}
+
+/* start portfolio-summary section                 */
+.portfolio-summary {
+    color: var(--colorR);
+    display: flex;
+}
+
+.portfolio-summary > p {
+    width: 33%;
+    font-size: smaller;
+    padding-top: 5%;
+}
+
+@media (max-width: 576px) {
+    .portfolio-summary > p {
+        width: 53%;
+        font-size: xx-small;
+    }
+}
+
+/* end portfolio-summary section                 */
+
+/* start portfolio-header section                 */
+.portfolio-header {
+    background-color: var(--colorG);
+}
+
+.header-content {
+    margin-left: 5%;
+    width: 95%;
+    height: fit-content;
+    padding-top: 13%;
+
+}
+
+.header-content-flex {
+    display: flex;
+}
+
+.header-content h1 {
+    font-size: 60px;
+}
+
+.header-content-info {
+    font-size: small;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 2%;
+    margin-left: -20%;
+}
+
+.header-content-info span{
+    display: block;
+    color: var(--colorR);
+}
+
+.header-content-social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-content .header-content-social h2 {
+    color: var(--colorR);
+    text-transform: uppercase;
+    width: 70%;
+}
+
+.social-media {
+    text-align: right;
+    margin-right: 5%;
+    width: 30%;
+}
+
+.social-media a {
+    color: black;
+    margin-right: 25px;
+}
+
+@media (max-width: 576px) {
+    .header-content h1 {
+        font-size: 29px;
+    }
+
+    .header-content-info {
+        font-size: x-small;
+        padding-top: unset;
+    }
+
+    .header-content .header-content-social h2 {
+        width: 60%;
+        font-size: unset;
+    }
+
+    .social-media {
+        text-align: center;
+        margin-right: unset;
+        width: 40%;
+    }
+
+    .social-media a {
+        margin-right: 15px;
+    }
+}
+/* end portfolio-header section              */
+
+/* start portfolio-Info section              */
+.portfolio-Info .title {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.portfolio-Info .title h2 {
+    width: 50%;
+    color: var(--colorR);
+    text-transform: uppercase;
+}
+
+.portfolio-Info .info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-Info .info div{
+    width: 50%;
+}
+
+.portfolio-Info .info div:nth-child(1) h3:nth-child(2), div:nth-child(3) h3:nth-child(2){
+    text-transform: capitalize;
+}
+
+.portfolio-Info .info div:nth-child(2) h3:nth-child(2), div:nth-child(4) h3:nth-child(2){
+    text-transform: uppercase;
+    color: var(--colorR);
+}
+
+.portfolio-Info .info div:nth-child(1), div:nth-child(2){
+    margin-bottom: 30px;
+}
+
+.portfolio-Info .info span {
+    color: var(--colorR);
+}
+
+.portfolio-Info .info div p {
+    color: gray;
+    width: 70%;
+}
+
+@media (max-width: 576px) {
+    .portfolio-Info .title h2 {
+        font-size: large;
+    }
+
+    .portfolio-Info .info div h3:nth-child(1) {
+        font-size: medium;
+    }
+
+    .portfolio-Info .info div:nth-child(1) h3:nth-child(2), div:nth-child(3) h3:nth-child(2) {
+        font-size: x-small;
+    }
+
+    .portfolio-Info .info div p {
+        color: var(--colorG);
+        width: 88%;
+        font-size: x-small;
+    }
+}
+
+@media (min-width: 577px) and (max-width:992px){
+    .portfolio-Info .title h2:nth-child(2) {
+        padding-left: 35px;
+    }
+
+    .portfolio-Info .info div:nth-child(2), div:nth-child(4) {
+        padding-left: 35px;
+    }
+}
+/* end portfolio-Info section                   */
+
+/* start picture section                         */
+.picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+
+.picture img {
+    width: 65%;
+}
+
+@media (max-width: 576px) {
+    .picture {
+        text-align: right;
+        right: unset;
+    }
+
+    .picture img {
+        width: 45%;
+    }
+}
+
+/* end picture section                         */
